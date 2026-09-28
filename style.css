@@ -4,6 +4,7 @@
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
+/* O NAVEGADOR */
 .nav{
 
     display: flex; 
@@ -15,14 +16,10 @@
     margin: 0px;
     height: 47px;
 }
-.logo{
-    height: auto;
-    padding-left: 80px;
-    margin-left: 40px;
-    width: 14%;
-    padding-right: 20px;
-}
+/* COMPONENTES DO NAVEGADOR */
 
+
+/* ELEMENTOS EX: PRODUTOS / SOLUÇÕES / INDÚSTRIAS / SHOP / DRIVERS / SUPORTE */
 li{
     color: #3d3e3c;
     transition: 40ms;
@@ -30,14 +27,23 @@ li{
 li:hover{
     color: black;
 }
+/* PRODUTOS / SOLUÇÕES / INDÚSTRIAS /  */
 .esquerda{
     display: flex;
     gap: 20px;
     list-style-type: none; 
     cursor: pointer;
-
-    
 }
+/* AS LOGOS DA ESQUERDA */
+
+.logo{
+    height: auto;
+    padding-left: 80px;
+    margin-left: 40px;
+    width: 14%;
+    padding-right: 20px;
+}
+ /* SHOP / DRIVERS / SUPORTE  */
 .direita{
     display: flex;
     gap: 23px;
@@ -46,6 +52,7 @@ li:hover{
     cursor: pointer;
 
 }
+/* AS LOGOS DA DIREITA */
 .BR{
     height: auto;
     width: 33px;
@@ -63,6 +70,9 @@ li:hover{
     padding: 0%;
     position: relative;
 }
+/* ######################################################################################################################## */
+
+/* SEPARAÇÃO DO NAVEGADOR ENTRE O CONTEUDO PRINCIPAL */
 .green{
     background-color: #76B900;
     padding: 15px 0;
@@ -83,8 +93,6 @@ li:hover{
     font-weight: bold;
     font-size: 16px;
     cursor: pointer;
-
-
 }
 .x{
     background-color: black;
@@ -96,8 +104,10 @@ li:hover{
     position: absolute;
     right: 30px;
     cursor: pointer;
-    
 }
+/* ######################################################################################################################## */
+
+/* CONTEUDO PRINCIPAL */
 .principal{ 
     min-height: 100vh;
     background-image: url("img/fundo.png");
