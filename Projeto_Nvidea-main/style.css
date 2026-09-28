@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+.nav{
+
+    display: flex; 
+    list-style-type: none; 
+    gap: 20px; 
+    padding: 0%;
+    align-items: center;
+    color: #3d3e3c;
+    margin: 0px;
+    height: 47px;
+}
+.logo{
+    height: auto;
+    padding-left: 80px;
+    margin-left: 40px;
+    width: 14%;
+    padding-right: 20px;
+}
+
+li{
+    color: #3d3e3c;
+    transition: 40ms;
+}
+li:hover{
+    color: black;
+}
+.esquerda{
+    display: flex;
+    gap: 20px;
+    list-style-type: none; 
+    cursor: pointer;
+
+    
+}
+.direita{
+    display: flex;
+    gap: 23px;
+    list-style-type: none;
+    margin-left: auto;
+    cursor: pointer;
+
+}
+.BR{
+    height: auto;
+    width: 33px;
+    text-align: center;
+    padding: 0%;
+    position: relative;
+    margin-left: 5%;
+
+    right: -0.5%;
+}
+.SingIn{
+    height: auto;
+    width: 5%;
+    margin-right: 7%;
+    padding: 0%;
+    position: relative;
+}
+.green{
+    background-color: #76B900;
+    padding: 15px 0;
+    text-align: center;
+    margin: 0px;
+    width: 100%;
+    font-weight: bold;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+
+}
+.botao_registre{
+    border: none;
+    color: white;
+    background-color: black;
+    padding: 5px 10px 5px 10px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+
+
+}
+.x{
+    background-color: black;
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+    border-radius: 50%;
+    color: #76B900; 
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+    
+}
+.principal{ 
+    min-height: 100vh;
+    background-image: url("img/fundo.png");
+    color: white;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+.titulo{
+    padding: 80px;
+    line-height: 1.5;
+    width: 45%;
+    font-size: 25px;
+}
+.botao_principal{
+    margin-top: 20px;
+    background-color: #76B900;
+    height: 50px;
+    width: 30%;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
