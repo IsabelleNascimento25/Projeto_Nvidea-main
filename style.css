@@ -1,79 +1,100 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
-/* O NAVEGADOR */
-.nav{
 
+/* Tira a barra lateral */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+/* ################################################################################################################################# */
+/* O NAVEGADOR */
+.nav {
     display: flex; 
     list-style-type: none; 
     gap: 20px; 
-    padding: 0%;
+    padding: 0 15px;
     align-items: center;
     color: #3d3e3c;
     margin: 0px;
-    height: 47px;
+    height: 50px;
+    position: relative;
 }
-/* COMPONENTES DO NAVEGADOR */
 
-
-/* ELEMENTOS EX: PRODUTOS / SOLUÇÕES / INDÚSTRIAS / SHOP / DRIVERS / SUPORTE */
-li{
+li {
     color: #3d3e3c;
     transition: 40ms;
 }
-li:hover{
+
+li:hover {
     color: black;
 }
-/* PRODUTOS / SOLUÇÕES / INDÚSTRIAS /  */
-.esquerda{
+
+.esquerda {
     display: flex;
     gap: 20px;
     list-style-type: none; 
     cursor: pointer;
 }
-/* AS LOGOS DA ESQUERDA */
 
-.logo{
-    height: auto;
-    padding-left: 80px;
-    margin-left: 40px;
-    width: 14%;
-    padding-right: 20px;
+/* LOGO */
+.logo {
+    height: 25px;
+    width: auto;
+    flex-shrink: 0; /* Impede de diminuir/esmagar */
 }
- /* SHOP / DRIVERS / SUPORTE  */
-.direita{
+
+.direita {
     display: flex;
     gap: 23px;
     list-style-type: none;
     margin-left: auto;
     cursor: pointer;
-
 }
-/* AS LOGOS DA DIREITA */
-.BR{
-    height: auto;
-    width: 33px;
-    text-align: center;
-    padding: 0%;
-    position: relative;
-    margin-left: 5%;
 
-    right: -0.5%;
+/* ÍCONES DA DIREITA */
+.icones-direita {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto; /* Empurra BR e Sign In para a extrema direita */
+    flex-shrink: 0;
 }
-.SingIn{
-    height: auto;
-    width: 5%;
-    margin-right: 7%;
-    padding: 0%;
-    position: relative;
-}
-/* ######################################################################################################################## */
 
-/* SEPARAÇÃO DO NAVEGADOR ENTRE O CONTEUDO PRINCIPAL */
-.green{
+.logos_iniciais{
+    display: flex;
+}
+
+.BR {
+    height: 30px;
+    width: auto;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.SingIn {
+    height: 30px;
+    width: auto;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* HAMBÚRGUER (Escondido no PC) */
+.menu-hamburguer {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #3d3e3c;
+}
+
+/* ################################################################################################################################# */
+/* SEPARAÇÃO DO NAVEGADOR ENTRE O CONTEÚDO PRINCIPAL */
+.green {
     background-color: #76B900;
     padding: 15px 0;
     text-align: center;
@@ -83,18 +104,20 @@ li:hover{
     display: flex; 
     align-items: center;
     justify-content: center;
-
+    position: relative;
 }
-.botao_registre{
+
+.botao_registre {
     border: none;
     color: white;
     background-color: black;
-    padding: 5px 10px 5px 10px;
+    padding: 5px 10px;
     font-weight: bold;
     font-size: 16px;
     cursor: pointer;
 }
-.x{
+
+.x {
     background-color: black;
     width: 25px;
     height: 25px;
@@ -102,13 +125,14 @@ li:hover{
     border-radius: 50%;
     color: #76B900; 
     position: absolute;
-    right: 30px;
+    right: 15px;
     cursor: pointer;
+    line-height: 25px;
 }
-/* ######################################################################################################################## */
 
-/* CONTEUDO PRINCIPAL */
-.principal{ 
+/* ################################################################################################################################# */
+/* CONTEÚDO PRINCIPAL */
+.principal { 
     min-height: 100vh;
     background-image: url("img/fundo.png");
     color: white;
@@ -116,15 +140,16 @@ li:hover{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    
 }
-.titulo{
+
+.titulo {
     padding: 80px;
     line-height: 1.5;
     width: 45%;
     font-size: 25px;
 }
-.botao_principal{
+
+.botao_principal {
     margin-top: 20px;
     background-color: #76B900;
     height: 50px;
@@ -134,3 +159,36 @@ li:hover{
     border: none;
     cursor: pointer;
 }
+/* ################################################################################################################################# */
+
+/* CELULAR */
+@media (max-width: 768px) {
+
+    .esquerda,
+    .direita {
+        display: none;
+    }
+
+    .logo {
+        padding-left: 0;
+        margin-left: 0;
+        width: auto;
+    }
+
+    .BR.SingIn {
+        margin-left: auto;
+    }
+
+    .BR {
+        margin-right: 10px;
+    }
+
+    .titulo {
+        width: 100%;
+        padding: 40px 20px;
+        font-size: 18px;
+    }
+
+    .botao_principal {
+        width: 100%;
+    }
